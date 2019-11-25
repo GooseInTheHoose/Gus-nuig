@@ -1,0 +1,130 @@
+#include "stdio.h"
+
+int getLength(char string[]); 
+int isAlphabetical(char c);
+int isVowel(char c);
+int countVowels(char string[]); 
+int countConsonants(char string[]);
+
+int main()
+{
+	char string[81];
+	int numVowels = 0, numConsonants = 0;
+	puts("Enter string:");
+	gets_s(string, 80);
+	numVowels = countVowels(string);
+	printf("Number of vowels = %d \n\n", numVowels);
+	numConsonants = countConsonants(string);
+	printf("Number of consonants = %d \n\n", numConsonants);
+
+	return 0;
+}
+
+int getLength(char string[])
+{
+	int var = 0;
+
+	while (string[var] != '\0')
+	{
+		var++;
+	}
+	return(var);
+}
+
+int isAlphabetical(char c)
+{
+
+
+	if (c >= 'A' && c <= 'Z')
+	{
+		return 1;
+	}
+	else if (c >= 'a' && c <= 'z')
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+
+}
+
+int isVowel(char c)
+{
+
+	if (c == 'a')
+
+	{
+		return 1;
+	}
+	else if (c == 'e')
+	{
+		return 1;
+	}
+	else if (c == 'i')
+	{
+		return 1;
+	}
+	else if (c == 'o')
+	{
+		return 1;
+	}
+	else if (c == 'u')
+	{
+		return 1;
+	}
+	else if (c == 'A')
+	{
+		return 1;
+	}
+	else if (c == 'E')
+	{
+		return 1;
+	}
+	else if (c == 'I')
+	{
+		return 1;
+	}
+	else if (c == 'O')
+	{
+		return 1;
+	}
+	else if (c == 'U')
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+
+int countVowels(char string[])
+{
+	int v = 0;
+	for (int i = 0; i < getLength(string); i++)
+	{
+		if (isVowel(string[i]) && isAlphabetical(string[i]))
+		{
+			v++;
+			continue;
+		}
+	}
+	return(v);
+}
+
+int countConsonants(char string[])
+{
+	int c=0;
+	for (int i = 0; i <= getLength(string); i++)
+	{
+		if (isVowel(string[i]) == 0 && isAlphabetical(string[i]) == 1)
+		{
+			c++;
+			continue;
+		}
+	}
+	return(c);
+}
