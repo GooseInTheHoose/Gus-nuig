@@ -1,0 +1,51 @@
+
+
+body
+{
+    background-color: rgb(60,00,60);
+    font-size:14px;
+    color: red;
+
+}
+
+
+h1
+{
+    color: rgb(200,00,60);
+    background-color: darkmagenta;
+
+}
+div {
+    background-color: rgba(60,00,60,0.9);
+}
+
+h5:hover {background-color: rgb(217, 0, 255)
+}
+
+thead {font-size:35px;}
+
+img {width:100%; height:200px;}
+
+.card
+{
+    background-color: rgb(32, 0, 60);
+
+}
+
+.card-body {background-color: rgb(160,00,60)}
+
+.div{background-color: rgb(160,00,60)}
+
+textarea {
+    width: 50%;
+    height: 150px;
+    padding: 120px 20px;
+    box-sizing: border-box;
+    border: 20px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+
+
